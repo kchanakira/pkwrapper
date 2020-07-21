@@ -1,0 +1,31 @@
+# ROMs
+*.NDS
+*.nds
+*.GB
+*.gb
+*.GBC
+*.gbc
+*.GBA
+*.gba
+*.RNDP
+*.rndp
+*.RNQS
+*.rnqs
+*.sgm
+*.sav
+*.rtc
+*.sgb
+*.sn*
+*.rar
+*.zip
+*.pkm
+
+# Gradle
+*.iml
+.gradle
+/local.properties
+/.idea
+.DS_Store
+/build
+/captures
+/libs/*.jar
