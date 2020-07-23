@@ -11,17 +11,23 @@ repositories {
 
 dependencies {
     implementation 'org.jetbrains.kotlin:kotlin-stdlib-jdk8'
-    implementation("com.github.ajalt:clikt-multiplatform:2.7.1")
-    implementation 'com.google.code.gson:gson:2.8.6'
     implementation 'javax.xml.bind:jaxb-api:2.3.1'
+    implementation 'com.github.ajalt:clikt-multiplatform:2.7.1'
+    implementation 'com.google.code.gson:gson:2.8.6'
+    implementation 'commons-io:commons-io:2.6'
     implementation files('libs/randomizer.jar')
 }
 
 jar {
+    duplicatesStrategy = DuplicatesStrategy.INCLUDE
     manifest {
         attributes 'Main-Class': 'com.chanakira.pkwrapper.Main'
     }
-    from { configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) } }
+    from {
+        configurations.runtimeClasspath.collect {
+            it.isDirectory() ? it : zipTree(it)
+        }
+    }
 }
 
 compileKotlin {

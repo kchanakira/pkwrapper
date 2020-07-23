@@ -7,10 +7,6 @@
 *.gbc
 *.GBA
 *.gba
-*.RNDP
-*.rndp
-*.RNQS
-*.rnqs
 *.sgm
 *.sav
 *.rtc
@@ -20,6 +16,15 @@
 *.zip
 *.pkm
 
+# Outputs
+*.log
+*.RNDP
+*.rndp
+*.RNQS
+*.rnqs
+*.JSON
+*.json
+
 # Gradle
 *.iml
 .gradle
@@ -28,4 +33,3 @@
 .DS_Store
 /build
 /captures
-/libs/*.jar
